@@ -24,3 +24,6 @@ It was perhaps the single course with the largest number of teachers ever. Acros
 1:10 student to section leader ratio
 1/2 of Stanford's CS106A
 Students and section leaders came from around the world, and represented a broad distribution of backgrounds. Everyone is welcome is one of our mottos (but for legal reasons participants needed to be over 18)
+
+# My project
+[my project](https://codeinplace.stanford.edu/2021/showcase/1478)

@@ -1,0 +1,111 @@
+problem: while dropping all the beeper - the beeper bag is not able to initialize after putting the pattern. So it runs infinite times.
+# write any code you want
+from karel.stanfordkarel import *
+def main():
+   put_beepers()
+   #collect_all_beepers()
+   #drop_all_beepers()
+   #return_home()
+def turn_around():
+   turn_left()
+   turn_left()
+def back_to_work():
+   turn_around()
+   move_to_wall()
+   turn_left()
+def move_to_wall():
+   while front_is_clear():
+      move()
+def return_home():
+   turn_around()
+   move_to_wall()
+   turn_around()
+def put_beepers():
+   #1
+   turn_left()
+   for i in range(1):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #2   
+   turn_left()
+   for i in range(1):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #3
+   turn_left()
+   for i in range(2):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #4
+   turn_left()
+   for i in range(2):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #5
+   turn_left()
+   for i in range(3):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #6
+   turn_left()
+   for i in range(2):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #7
+   turn_left()
+   for i in range(2):
+      put_beeper()
+      if front_is_clear():
+         move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   #8
+   turn_left()
+   for i in range(1):
+      put_beeper()
+      move()
+   back_to_work()
+   if front_is_clear():
+      move()
+   return_home()
+   
+def collect_one_tower():
+   turn_left()
+   collect_line_of_beepers()
+   turn_around()
+   move_to_wall()
+   turn_left()
+def collect_line_of_beepers():
+   while beepers_present():
+      pick_beeper()
+      if front_is_clear():
+         move()
+      
+def collect_all_beepers():
+   while front_is_clear():
+      collect_one_tower()
+      move()
+   collect_one_tower()
+   
+def drop_all_beepers():
+   while beepers_in_bag():
+      put_beeper()
